@@ -14,10 +14,10 @@ npm install --save-dev gulp-rigger
 
 ```js
 var gulp = require('gulp');
-var clean = require('gulp-rigger');
+var rigger = require('gulp-rigger');
 
 gulp.task('default', function () {
-	gulp.src('app/*.js', {read: false})
+	gulp.src('app/*.js')
 		.pipe(rigger())
 		.pipe(gulp.dest('build/'));
 });
