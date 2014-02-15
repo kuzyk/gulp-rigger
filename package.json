@@ -1,0 +1,23 @@
+{
+    "name"        : "gulp-rigger",
+    "version"     : "0.5.7",
+    "author"      : {
+        "name": "askuzyk@gmail.com",
+        "url" : "https://github.com/kuzyk"
+    },
+    "keywords"    : [
+        "gulpplugin"
+    ],
+    "homepage"    : "https://github.com/kuzyk/gulp-rigger",
+    "main"        : "index.js",
+    "license"     : "MIT",
+    "description" : "A gulp plugin for using rigger",
+    "repository"  : {
+        "type": "git",
+        "url" : "https://github.com/kuzyk/gulp-rigger.git"
+    },
+    "dependencies": {
+        "rigger"      : "~0.5.7",
+        "event-stream": "~3.1.0"
+    }
+}
