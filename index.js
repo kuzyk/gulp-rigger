@@ -6,9 +6,15 @@ module.exports = function (options) {
     options = options || {};
 
     return es.map(function (file, cb) {
-        options.cwd = path.dirname(file.path);
-        options.filetype = path.extname(file.path).slice(1);
-        options.targetType = path.extname(file.path).slice(1);
+	if(!options.cwd){
+	        options.cwd = path.dirname(file.path);
+	}
+	if(!options.filetype){
+	        options.filetype = path.extname(file.path).slice(1);
+	}
+	if(!options.targetType){
+	        options.targetType = path.extname(file.path).slice(1);
+	}
 
         rigger.process(file.contents.toString(), options, function (error, content) {
             file.contents = new Buffer(content);
