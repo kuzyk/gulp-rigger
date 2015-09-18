@@ -21,8 +21,12 @@ module.exports = function (options) {
         }
 
         rigger.process(file.contents.toString(), options, function (error, content) {
-            file.contents = new Buffer(content);
-            cb(error, file);
+            if (error) {
+                cb(error);
+            } else {
+                file.contents = new Buffer(content);
+                cb(null, file);
+            }
         });
     });
 }
